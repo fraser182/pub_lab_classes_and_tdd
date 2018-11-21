@@ -43,8 +43,7 @@ class PubTest < MiniTest::Test
   def test_till_amount_increases()
     @pub.increase_till_amount(@drink1.price)
     assert_equal(104, @pub.till)
-
-
   end
+
 
 end

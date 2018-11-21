@@ -14,18 +14,18 @@ class Pub
     return @drinks_list.count
   end
 
-  # Finds the drink and deletes it. Returns the new array
-  def sell_a_drink(drinks_list)
-    if @drinks_list.include?(drinks_list)
-      @drinks_list.delete(drinks_list)
+  # Finds the drink and deletes it. Returns the new array without the sold drink
+  def sell_a_drink(drink)
+    if @drinks_list.include?(drink)
+      return @drinks_list.delete(drink)
     end
-    return @drinks_list
+    return nil
   end
 
 # Increased the till amount by the value of the drink sold (@drink1)
-  def increase_till_amount(drink_to_sell)
-   @till += drink_to_sell
+  def increase_till_amount(drink_price)
+   @till += drink_price
   end
 
-  
+
 end
